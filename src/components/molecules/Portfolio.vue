@@ -10,7 +10,7 @@ import SectionShell from '../molecules/SectionShell.vue'
 
 <style lang="scss" scoped>
 .section {
-  background-color: yellow;
+  background-color: #fcb10c;
 }
 
 .content {

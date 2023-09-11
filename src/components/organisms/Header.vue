@@ -19,7 +19,11 @@ import NavMobile from '../molecules/NavMobile.vue'
   justify-content: space-between;
   align-items: center;
 
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  background-color: #01874c;
 }
 
 .nav {

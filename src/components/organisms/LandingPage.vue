@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="container">
     <Home />
     <Tour />
@@ -7,6 +6,7 @@
     <Contact />
     <About />
   </div>
+  <Header />
 </template>
 
 <script setup>
