@@ -1,8 +1,10 @@
 <template>
-  <h1>Site em construção</h1>
+  <Index />
 </template>
 
-<script setup></script>
+<script setup>
+import Index from './views/Index.vue'
+</script>
 
 <style lang="scss">
 * {
