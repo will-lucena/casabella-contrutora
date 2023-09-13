@@ -17,7 +17,7 @@ import SectionShell from '../molecules/SectionShell.vue'
 .content {
   width: 100%;
   height: 100%;
-  max-width: 920px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 </style>

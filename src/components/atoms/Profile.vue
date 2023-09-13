@@ -31,4 +31,18 @@ defineProps(['profile'])
     color: white;
   }
 }
+
+@media only screen and (min-width: 600px) {
+  .profile {
+    &__image {
+      width: 100px;
+      height: 100px;
+    }
+
+    &__name {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
 </style>

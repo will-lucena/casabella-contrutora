@@ -17,9 +17,13 @@
           class="close_bottom_sheet"
           size="2xl"
         />
-        <h3 class="menu_item">Projeto principal</h3>
-        <h3 class="menu_item">Portfolio</h3>
-        <h3 class="menu_item">Contato</h3>
+        <h3 @click="toggle" class="menu_item">
+          <a class="menu_item" href="#tour">Tour virtual</a>
+        </h3>
+        <h3 @click="toggle" class="menu_item">
+          <a class="menu_item" href="#portfolio">Portfolio</a>
+        </h3>
+        <h3 @click="toggle" class="menu_item"><a class="menu_item" href="#contact">Contato</a></h3>
       </div>
     </div>
   </div>

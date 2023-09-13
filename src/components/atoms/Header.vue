@@ -1,7 +1,7 @@
 <template>
   <header class="header__container">
     <img class="logo" src="@/assets/logo.png" alt="Casabella Construtora logo" />
-    <h1 class="title">Casabella Construtora</h1>
+    <h1><a class="title" href="#">Casabella Construtora</a></h1>
   </header>
 </template>
 

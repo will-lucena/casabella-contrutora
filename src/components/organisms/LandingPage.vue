@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <Home />
-    <Tour />
+    <Tour id="tour" />
     <Portfolio />
-    <Contact />
+    <Contact id="contact" />
     <About />
   </div>
   <Header />
