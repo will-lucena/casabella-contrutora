@@ -4,8 +4,8 @@
       <section class="info__container">
         <section class="info__about_us">
           <div>
-            <h2>Quem somos</h2>
-            <p>
+            <h2 class="heading">Quem somos</h2>
+            <p class="text">
               Há mais de uma década no mercado de construção civil na Grande Natal e com um
               portfólio consistente de construções e empreendimentos de excelência, a Casabella é
               uma construtora comprometida com você. Projetamos futuros, prezando pela sua confiança
@@ -14,9 +14,13 @@
             </p>
           </div>
 
+          <section class="info__profiles">
+            <Profile v-for="(profile, index) in profiles" :key="index" :profile="profile" />
+          </section>
+
           <div>
-            <h2>Nossa Missão</h2>
-            <p>
+            <h2 class="heading">Nossa Missão</h2>
+            <p class="text">
               Ciente da vontade e desejo de seus clientes, a Casabella Construtora proporciona a
               concretização dos sonhos, transformando ideias em realidade, sempre com seriedade e
               qualidade na execução de suas obras, para entregar, à cada família, a melhor moradia,
@@ -24,30 +28,55 @@
               Conte sempre consoco!
             </p>
           </div>
-          <section>
-            <font-awesome-icon v-if="!expanded" icon="fa-brands fa-instagram" class="menu_toggle" />
+          <section class="social_media__container">
+            <a v-if="!expanded" href="">
+              <font-awesome-icon icon="fa-brands fa-instagram" class="social_media" />
+            </a>
 
-            <font-awesome-icon v-if="!expanded" icon="fa-brands fa-facebook" class="menu_toggle" />
+            <a v-if="!expanded" href="">
+              <font-awesome-icon
+                v-if="!expanded"
+                icon="fa-brands fa-facebook"
+                class="social_media"
+              />
+            </a>
 
-            <font-awesome-icon v-if="!expanded" icon="fa-brands fa-whatsapp" class="menu_toggle" />
+            <a v-if="!expanded" href="">
+              <font-awesome-icon
+                v-if="!expanded"
+                icon="fa-brands fa-whatsapp"
+                class="social_media"
+              />
+            </a>
           </section>
-        </section>
-
-        <section class="info_profiles">
-          <Profile v-for="(index, profile) in profiles" :key="index" :profile="profile" />
         </section>
       </section>
 
       <section class="product__container">
         <section class="product__info">
-          <h2>Nosso mais novo empreendimento</h2>
-          <p>askdjahskdjahskdjbaskdqgkwdhas</p>
-          <BaseButton />
+          <h2 class="heading">Nosso mais novo empreendimento</h2>
+          <p class="text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing
+          </p>
         </section>
 
         <div class="product__images">
-          <img v-for="(index, imageSource) in images" :key="index" :src="imageSource" />
+          <img
+            class="product__image"
+            v-for="({ source, alt }, index) in images"
+            :key="index"
+            :src="source"
+            :alt="alt"
+          />
         </div>
+
+        <BaseButton>Fale conosco</BaseButton>
       </section>
     </div>
   </SectionShell>
@@ -59,8 +88,36 @@ import BaseButton from '../atoms/BaseButton.vue'
 import Profile from '../atoms/Profile.vue'
 import SectionShell from '../molecules/SectionShell.vue'
 
-const profiles = ref([])
-const images = ref([])
+import fachada1 from '@/assets/coohabinalVillage/fachada1.png'
+import quarto from '@/assets/coohabinalVillage/quarto.png'
+
+import fachada3 from '@/assets/coohabinalVillage/fachada3.png'
+import sala from '@/assets/coohabinalVillage/sala.png'
+
+const profiles = ref([
+  {
+    name: 'Joao da silva',
+    imageSource: fachada3
+  },
+  {
+    name: 'Joao da cunha',
+    imageSource: fachada1
+  },
+  {
+    name: 'Joao da costa',
+    imageSource: quarto
+  },
+  {
+    name: 'Joao da selva',
+    imageSource: sala
+  }
+])
+const images = ref([
+  { alt: 'fachada1', source: fachada1 }
+  // { alt: 'fachada3', source: fachada3 },
+  // { alt: 'quarto', source: quarto },
+  // { alt: 'sala', source: sala }
+])
 </script>
 
 <style lang="scss" scoped>
@@ -70,8 +127,9 @@ p {
 }
 .section {
   background-color: #01874c;
-  height: 95vh;
   margin-top: 50px;
+  height: 100%;
+  padding-bottom: 2rem;
 }
 
 .content {
@@ -85,17 +143,20 @@ p {
   &__container {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   &__about_us {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   &__profiles {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 
@@ -103,6 +164,7 @@ p {
   &__container {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
   }
 
   &__info {
@@ -114,10 +176,40 @@ p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 240px;
+    height: 135px;
+  }
+}
+
+.heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.social_media {
+  color: white;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    gap: 2rem;
   }
 }
 
 @media only screen and (min-width: 600px) {
+  .section {
+    height: 95vh;
+  }
   .info {
     &__container {
       display: flex;

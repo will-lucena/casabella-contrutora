@@ -5,6 +5,7 @@
       icon="fa-solid fa-bars"
       @click="toggle"
       class="menu_toggle"
+      size="xl"
     />
     <div v-else>
       <div class="bottom_sheet__background"></div>
@@ -14,6 +15,7 @@
           icon="fa-solid fa-xmark"
           @click="toggle"
           class="close_bottom_sheet"
+          size="2xl"
         />
         <h3 class="menu_item">Projeto principal</h3>
         <h3 class="menu_item">Portfolio</h3>
