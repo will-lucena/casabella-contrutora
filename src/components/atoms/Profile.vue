@@ -32,7 +32,7 @@ defineProps(['profile'])
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .profile {
     &__image {
       width: 100px;

@@ -22,7 +22,13 @@
 
 .title {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
+}
+
+@media only screen and (min-width: 769px) {
+  .title {
+    font-size: 1.5rem;
+  }
 }
 </style>

@@ -42,7 +42,7 @@ function onNavigate(section) {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .nav {
     &--desktop {
       display: flex;

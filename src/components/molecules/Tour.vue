@@ -17,4 +17,14 @@
 import SectionShell from '../molecules/SectionShell.vue'
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.section {
+  height: 300px;
+}
+
+@media only screen and (min-width: 769px) {
+  .section {
+    height: 500px;
+  }
+}
+</style>

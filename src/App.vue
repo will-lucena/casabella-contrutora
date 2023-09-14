@@ -10,7 +10,7 @@ import Index from './views/Index.vue'
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: calc(15px + 0.390625vw);
 }
 
 p,

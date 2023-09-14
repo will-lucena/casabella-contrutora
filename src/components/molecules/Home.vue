@@ -60,14 +60,11 @@
         <section class="product__info">
           <h2 class="heading">Nosso mais novo empreendimento</h2>
           <p class="text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has
-            survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s with the release of
-            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-            publishing
+            O Residencial Coohabinal Village está localizado em uma das melhores localizações de
+            Parnamirim, com área de lazer completa, proporcionando para você e sua família,
+            segurança, tranquilidade e conforto em sua casa!
           </p>
+          <BaseButton>Agende uma visita</BaseButton>
         </section>
 
         <div class="product__images">
@@ -79,8 +76,6 @@
             :alt="alt"
           />
         </div>
-
-        <BaseButton>Fale conosco</BaseButton>
       </section>
     </div>
   </SectionShell>
@@ -224,10 +219,7 @@ const images = ref([
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .section {
-    height: 90vh;
-  }
+@media only screen and (min-width: 769px) {
   .info {
     &__container {
       display: flex;
@@ -236,9 +228,9 @@ const images = ref([
 
     &__about_us {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
-      gap: 4rem;
+      gap: 1rem;
     }
   }
 
@@ -250,7 +242,13 @@ const images = ref([
   .product {
     &__container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__info,
+    &__images {
+      flex: 1;
     }
   }
 
