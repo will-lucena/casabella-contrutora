@@ -20,7 +20,7 @@ import SectionShell from '../molecules/SectionShell.vue'
 .section {
   background-color: #00361e;
   height: 100%;
-  padding-top: 1rem;
+  padding-bottom: 0;
 }
 
 .content {

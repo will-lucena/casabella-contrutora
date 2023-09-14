@@ -2,7 +2,7 @@
   <div class="container">
     <Home />
     <Tour id="tour" />
-    <Portfolio />
+    <Portfolio id="portfolio" />
     <Contact id="contact" />
     <About />
   </div>
