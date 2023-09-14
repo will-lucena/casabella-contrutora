@@ -1,6 +1,10 @@
 <template>
   <SectionShell class="section">
-    <div class="content"></div>
+    <div class="content">
+      <h2>Entre em contato</h2>
+      <input type="text" name="" id="" placeholder="Nome" />
+      <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+    </div>
   </SectionShell>
 </template>
 
