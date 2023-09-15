@@ -27,22 +27,34 @@
             </p>
           </div>
           <section class="social_media__container">
-            <a href="https://www.instagram.com/casabellaconstrucaobr/" target="_blank">
+            <a
+              href="https://www.instagram.com/casabellaconstrucaobr/"
+              target="_blank"
+              aria-label="ícone do instagram"
+            >
               <font-awesome-icon size="lg" icon="fa-brands fa-instagram" class="social_media" />
             </a>
 
-            <a href="https://www.facebook.com/casabellaconstrucaobr" target="_blank">
+            <a
+              href="https://www.facebook.com/casabellaconstrucaobr"
+              target="_blank"
+              aria-label="ícone do facebook"
+            >
               <font-awesome-icon size="lg" icon="fa-brands fa-facebook" class="social_media" />
             </a>
 
-            <a href="https://api.whatsapp.com/send?phone=5584981592121" target="_blank">
+            <a
+              href="https://api.whatsapp.com/send?phone=5584981592121"
+              target="_blank"
+              aria-label="ícone do whatsapp"
+            >
               <font-awesome-icon size="lg" icon="fa-brands fa-whatsapp" class="social_media" />
             </a>
           </section>
         </section>
       </section>
 
-      <img loading="lazy" :src="fachada1" alt="Time" />
+      <img class="people" :src="fachada1" alt="Time" />
 
       <section class="product__container">
         <section class="product__info">
@@ -185,6 +197,10 @@ function onClick() {
     gap: 2rem;
     justify-content: center;
   }
+}
+
+.people {
+  width: 100%;
 }
 
 @media only screen and (min-width: 769px) {

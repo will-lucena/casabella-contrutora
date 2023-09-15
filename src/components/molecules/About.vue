@@ -7,7 +7,7 @@
         <p class="text">Rua de Manoel Ovídio, nº 1381, Barro vermelho, Natal-RN</p>
         <p class="text">3033-1629</p>
       </div>
-      <h4 class="copyright">Desenvolvido por Will Lucena</h4>
+      <h3 class="copyright">Desenvolvido por Will Lucena</h3>
     </div>
   </SectionShell>
 </template>

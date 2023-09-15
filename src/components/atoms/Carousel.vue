@@ -11,10 +11,20 @@
         loading="lazy"
       />
 
-      <BaseButton class="prev" @click="plusSlides(-1)" icon-button>
+      <BaseButton
+        class="prev"
+        @click="plusSlides(-1)"
+        icon-button
+        aria-label="ícone de slide anterior"
+      >
         <font-awesome-icon size="lg" icon="fa-solid fa-chevron-left" />
       </BaseButton>
-      <BaseButton class="next" @click="plusSlides(1)" icon-button>
+      <BaseButton
+        class="next"
+        @click="plusSlides(1)"
+        icon-button
+        aria-label="ícone de próximo slide"
+      >
         <font-awesome-icon size="lg" icon="fa-solid fa-chevron-right" />
       </BaseButton>
     </div>
