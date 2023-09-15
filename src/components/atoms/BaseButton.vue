@@ -1,5 +1,8 @@
 <template>
-  <button class="button" :class="{ 'button--full_width': fullWidth }">
+  <button
+    class="button"
+    :class="{ 'button--full_width': fullWidth, 'button--icon_button': iconButton }"
+  >
     <slot></slot>
   </button>
 </template>
@@ -7,6 +10,10 @@
 <script setup>
 defineProps({
   fullWidth: {
+    type: Boolean,
+    default: false
+  },
+  iconButton: {
     type: Boolean,
     default: false
   }
@@ -31,6 +38,10 @@ defineProps({
 
   &:hover {
     background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+
+  &--icon_button {
+    border: none;
   }
 }
 </style>

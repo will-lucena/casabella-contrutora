@@ -4,7 +4,7 @@
       <h2 class="heading">Outros de nossos empreendimentos</h2>
       <div class="product__container">
         <div class="product" v-for="({ copy, imageSource, alt }, index) in products" :key="index">
-          <img class="image" :src="imageSource" :alt="alt" />
+          <img loading="lazy" class="image" :src="imageSource" :alt="alt" />
           <p class="text">
             {{ copy }}
           </p>
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import fachada1 from '@/assets/coohabinalVillage/fachada1.png'
+import fachada1 from '@/assets/coohabinalVillage/fachada1.webp'
 import { ref } from 'vue'
 import BaseButton from '../atoms/BaseButton.vue'
 import SectionShell from '../molecules/SectionShell.vue'

@@ -42,7 +42,7 @@
         </section>
       </section>
 
-      <img src="@/assets/coohabinalVillage/fachada1.png" alt="Time" />
+      <img loading="lazy" :src="fachada1" alt="Time" />
 
       <section class="product__container">
         <section class="product__info">
@@ -66,10 +66,10 @@ import { ref } from 'vue'
 import BaseButton from '../atoms/BaseButton.vue'
 import SectionShell from '../molecules/SectionShell.vue'
 
-import fachada1 from '@/assets/coohabinalVillage/fachada1.png'
-import fachada3 from '@/assets/coohabinalVillage/fachada3.png'
-import quarto from '@/assets/coohabinalVillage/quarto.png'
-import sala from '@/assets/coohabinalVillage/sala.png'
+import fachada1 from '@/assets/coohabinalVillage/fachada1.webp'
+import fachada3 from '@/assets/coohabinalVillage/fachada3.webp'
+import quarto from '@/assets/coohabinalVillage/quarto.webp'
+import sala from '@/assets/coohabinalVillage/sala.webp'
 import Carousel from '../atoms/Carousel.vue'
 
 const images = ref([

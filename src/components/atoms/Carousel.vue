@@ -8,14 +8,15 @@
         :key="index"
         :src="source"
         :alt="alt"
+        loading="lazy"
       />
 
-      <a class="prev" @click="plusSlides(-1)">
+      <BaseButton class="prev" @click="plusSlides(-1)" icon-button>
         <font-awesome-icon size="lg" icon="fa-solid fa-chevron-left" />
-      </a>
-      <a class="next" @click="plusSlides(1)">
+      </BaseButton>
+      <BaseButton class="next" @click="plusSlides(1)" icon-button>
         <font-awesome-icon size="lg" icon="fa-solid fa-chevron-right" />
-      </a>
+      </BaseButton>
     </div>
 
     <div style="text-align: center">
@@ -32,6 +33,7 @@
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
+import BaseButton from './BaseButton.vue'
 
 const props = defineProps({
   slides: {
@@ -101,30 +103,17 @@ onMounted(() => {
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* The dots/bullets/indicators */
