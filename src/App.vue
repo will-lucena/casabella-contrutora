@@ -25,6 +25,10 @@ a {
   font-family: 'Montserrat', sans-serif;
 }
 
+a {
+  width: fit-content;
+}
+
 html {
   scroll-behavior: smooth;
 }

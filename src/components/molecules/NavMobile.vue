@@ -43,8 +43,8 @@ function toggle() {
 .bottom_sheet {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: 0;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,12 +53,12 @@ function toggle() {
 
   &__background {
     background-color: black;
-    opacity: 0.95;
+    opacity: 0.8;
 
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 70%;
     height: 100vh;
   }
 }

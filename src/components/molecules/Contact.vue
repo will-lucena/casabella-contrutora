@@ -1,10 +1,11 @@
 <template>
   <SectionShell class="section">
     <div class="content">
-      <form class="form">
-        <h2>Entre em contato</h2>
-        <input type="text" name="" id="" placeholder="Nome" />
-        <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+      <form class="form" @submit.prevent="onSubmit">
+        <h2 class="heading">Entre em contato</h2>
+        <BaseInput placeholder="Nome" v-model="name" />
+        <BaseTextArea placeholder="Mensagem" v-model="message" />
+        <BaseButton full-width>Enviar mensagem</BaseButton>
       </form>
       <GMapMap
         :center="{ lat, lng }"
@@ -20,10 +21,28 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import BaseButton from '../atoms/BaseButton.vue'
+import BaseInput from '../atoms/BaseInput.vue'
+import BaseTextArea from '../atoms/BaseTextArea.vue'
 import SectionShell from '../molecules/SectionShell.vue'
 
 const lat = -5.804091581760512
 const lng = -35.20631708465691
+
+const name = ref('')
+const message = ref('')
+
+function onSubmit() {
+  if (!name.value || !message.value) {
+    return
+  }
+
+  const phone = '+5584981592121'
+  const url = `https://api.whatsapp.com/send?text=${message.value}&phone=${phone}`
+
+  window.open(url)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +67,12 @@ const lng = -35.20631708465691
   flex-direction: column;
   align-items: stretch;
   gap: 2rem;
+}
+
+.heading {
+  font-size: 1.75rem;
+  color: white;
+  font-weight: 700;
 }
 
 .map {

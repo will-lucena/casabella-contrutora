@@ -10,8 +10,8 @@
           </p>
         </div>
       </div>
+      <BaseButton full-width @click="onClick">Quero saber mais</BaseButton>
     </div>
-    <BaseButton>Quero saber mais</BaseButton>
   </SectionShell>
 </template>
 
@@ -41,6 +41,11 @@ const products = ref([
   // { alt: 'quarto', source: quarto },
   // { alt: 'sala', source: sala }
 ])
+
+function onClick() {
+  const element = document.getElementById('contact')
+  element.scrollIntoView()
+}
 </script>
 
 <style lang="scss" scoped>

@@ -13,10 +13,6 @@
               necessária.
             </p>
           </div>
-
-          <section class="info__profiles">
-            <Profile v-for="(profile, index) in profiles" :key="index" :profile="profile" />
-          </section>
         </section>
 
         <section class="info__mission">
@@ -31,11 +27,19 @@
             </p>
           </div>
           <section class="social_media__container">
-            <a v-if="!expanded" href="">
+            <a
+              v-if="!expanded"
+              href="https://www.instagram.com/casabellaconstrucaobr/"
+              target="_blank"
+            >
               <font-awesome-icon size="lg" icon="fa-brands fa-instagram" class="social_media" />
             </a>
 
-            <a v-if="!expanded" href="">
+            <a
+              v-if="!expanded"
+              href="https://www.facebook.com/casabellaconstrucaobr"
+              target="_blank"
+            >
               <font-awesome-icon
                 size="lg"
                 v-if="!expanded"
@@ -44,7 +48,11 @@
               />
             </a>
 
-            <a v-if="!expanded" href="">
+            <a
+              v-if="!expanded"
+              href="https://api.whatsapp.com/send?phone=5584981592121"
+              target="_blank"
+            >
               <font-awesome-icon
                 size="lg"
                 v-if="!expanded"
@@ -56,6 +64,8 @@
         </section>
       </section>
 
+      <img src="@/assets/coohabinalVillage/fachada1.png" alt="Time" />
+
       <section class="product__container">
         <section class="product__info">
           <h2 class="heading">Nosso mais novo empreendimento</h2>
@@ -64,7 +74,7 @@
             Parnamirim, com área de lazer completa, proporcionando para você e sua família,
             segurança, tranquilidade e conforto em sua casa!
           </p>
-          <BaseButton>Agende uma visita</BaseButton>
+          <BaseButton class="product__cta" @click="onClick">Agende uma visita</BaseButton>
         </section>
 
         <div class="product__images">
@@ -82,41 +92,23 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import BaseButton from '../atoms/BaseButton.vue'
-import Profile from '../atoms/Profile.vue'
-import SectionShell from '../molecules/SectionShell.vue'
+import { ref } from 'vue';
+import BaseButton from '../atoms/BaseButton.vue';
+import SectionShell from '../molecules/SectionShell.vue';
 
-import fachada1 from '@/assets/coohabinalVillage/fachada1.png'
-import quarto from '@/assets/coohabinalVillage/quarto.png'
+import fachada1 from '@/assets/coohabinalVillage/fachada1.png';
 
-import fachada3 from '@/assets/coohabinalVillage/fachada3.png'
-import sala from '@/assets/coohabinalVillage/sala.png'
-
-const profiles = ref([
-  {
-    name: 'Joao da silva',
-    imageSource: fachada3
-  },
-  {
-    name: 'Joao da cunha',
-    imageSource: fachada1
-  },
-  {
-    name: 'Joao da costa',
-    imageSource: quarto
-  },
-  {
-    name: 'Joao da selva',
-    imageSource: sala
-  }
-])
 const images = ref([
   { alt: 'fachada1', source: fachada1 }
   // { alt: 'fachada3', source: fachada3 },
   // { alt: 'quarto', source: quarto },
   // { alt: 'sala', source: sala }
 ])
+
+function onClick() {
+  const element = document.getElementById('contact')
+  element.scrollIntoView()
+}
 </script>
 
 <style lang="scss" scoped>
@@ -176,6 +168,8 @@ const images = ref([
   &__info {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__images {
@@ -223,7 +217,7 @@ const images = ref([
   .info {
     &__container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     }
 
     &__about_us {
@@ -249,6 +243,11 @@ const images = ref([
     &__info,
     &__images {
       flex: 1;
+      gap: 1rem;
+    }
+
+    &__cta {
+      align-self: center;
     }
   }
 
