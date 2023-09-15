@@ -3,8 +3,8 @@
     <div class="content">
       <h2 class="heading">Outros de nossos empreendimentos</h2>
       <div class="product__container">
-        <div class="product" v-for="({ copy, imageSource }, index) in products" :key="index">
-          <img class="image" :src="imageSource" :alt="name" />
+        <div class="product" v-for="({ copy, imageSource, alt }, index) in products" :key="index">
+          <img class="image" :src="imageSource" :alt="alt" />
           <p class="text">
             {{ copy }}
           </p>

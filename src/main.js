@@ -1,14 +1,14 @@
 import './assets/main.css'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronLeft, faChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 import VueGoogleMaps from '@fawmi/vue-google-maps'
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { createApp } from 'vue'
 
-library.add(faBars, faXmark, faInstagram, faWhatsapp, faFacebook)
+library.add(faBars, faXmark, faInstagram, faWhatsapp, faFacebook, faChevronRight, faChevronLeft)
 
 import App from './App.vue'
 

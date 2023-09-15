@@ -27,38 +27,16 @@
             </p>
           </div>
           <section class="social_media__container">
-            <a
-              v-if="!expanded"
-              href="https://www.instagram.com/casabellaconstrucaobr/"
-              target="_blank"
-            >
+            <a href="https://www.instagram.com/casabellaconstrucaobr/" target="_blank">
               <font-awesome-icon size="lg" icon="fa-brands fa-instagram" class="social_media" />
             </a>
 
-            <a
-              v-if="!expanded"
-              href="https://www.facebook.com/casabellaconstrucaobr"
-              target="_blank"
-            >
-              <font-awesome-icon
-                size="lg"
-                v-if="!expanded"
-                icon="fa-brands fa-facebook"
-                class="social_media"
-              />
+            <a href="https://www.facebook.com/casabellaconstrucaobr" target="_blank">
+              <font-awesome-icon size="lg" icon="fa-brands fa-facebook" class="social_media" />
             </a>
 
-            <a
-              v-if="!expanded"
-              href="https://api.whatsapp.com/send?phone=5584981592121"
-              target="_blank"
-            >
-              <font-awesome-icon
-                size="lg"
-                v-if="!expanded"
-                icon="fa-brands fa-whatsapp"
-                class="social_media"
-              />
+            <a href="https://api.whatsapp.com/send?phone=5584981592121" target="_blank">
+              <font-awesome-icon size="lg" icon="fa-brands fa-whatsapp" class="social_media" />
             </a>
           </section>
         </section>
@@ -77,32 +55,28 @@
           <BaseButton class="product__cta" @click="onClick">Agende uma visita</BaseButton>
         </section>
 
-        <div class="product__images">
-          <img
-            class="product__image"
-            v-for="({ source, alt }, index) in images"
-            :key="index"
-            :src="source"
-            :alt="alt"
-          />
-        </div>
+        <Carousel class="product__images" :slides="images" />
       </section>
     </div>
   </SectionShell>
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import BaseButton from '../atoms/BaseButton.vue';
-import SectionShell from '../molecules/SectionShell.vue';
+import { ref } from 'vue'
+import BaseButton from '../atoms/BaseButton.vue'
+import SectionShell from '../molecules/SectionShell.vue'
 
-import fachada1 from '@/assets/coohabinalVillage/fachada1.png';
+import fachada1 from '@/assets/coohabinalVillage/fachada1.png'
+import fachada3 from '@/assets/coohabinalVillage/fachada3.png'
+import quarto from '@/assets/coohabinalVillage/quarto.png'
+import sala from '@/assets/coohabinalVillage/sala.png'
+import Carousel from '../atoms/Carousel.vue'
 
 const images = ref([
-  { alt: 'fachada1', source: fachada1 }
-  // { alt: 'fachada3', source: fachada3 },
-  // { alt: 'quarto', source: quarto },
-  // { alt: 'sala', source: sala }
+  { alt: 'fachada1', source: fachada1 },
+  { alt: 'fachada3', source: fachada3 },
+  { alt: 'quarto', source: quarto },
+  { alt: 'sala', source: sala }
 ])
 
 function onClick() {

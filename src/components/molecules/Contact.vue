@@ -14,7 +14,7 @@
         style="min-height: 300px"
         class="map"
       >
-        <GMapMarker :key="index" :position="{ lat, lng }" />
+        <GMapMarker :position="{ lat, lng }" />
       </GMapMap>
     </div>
   </SectionShell>
