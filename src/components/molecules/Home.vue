@@ -54,7 +54,7 @@
         </section>
       </section>
 
-      <img class="people" src="@/assets/team.jpg" alt="Time de engenharia" />
+      <img class="people" src="@/assets/team.webp" alt="Time de engenharia" />
 
       <section class="product__container">
         <section class="product__info">
