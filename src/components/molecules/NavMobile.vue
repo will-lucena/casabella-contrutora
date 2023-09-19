@@ -45,7 +45,7 @@ function toggle() {
   gap: 1rem;
 
   &__background {
-    background-color: black;
+    background-color: var(--black);
     opacity: 0.8;
 
     position: absolute;
@@ -59,7 +59,7 @@ function toggle() {
 .menu_item,
 .close_bottom_sheet,
 .menu_toggle {
-  color: white;
+  color: var(--white);
   align-self: flex-end;
 }
 

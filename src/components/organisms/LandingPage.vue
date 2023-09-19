@@ -40,8 +40,8 @@ import Header from './Header.vue'
 
   padding: 1rem;
   margin: 1rem;
-  color: white;
-  background-color: #25d366;
+  color: var(--white);
+  background-color: var(--light-green);
   border-radius: 100%;
   text-align: center;
   box-shadow: 2px 2px 3px #222;

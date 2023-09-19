@@ -120,7 +120,7 @@ function onClick() {
 <style lang="scss" scoped>
 @import '@/assets/base.scss';
 .section {
-  background-color: #01874c;
+  background-color: var(--light-green);
   margin-top: 50px;
   height: 100%;
   padding-bottom: 2rem;
@@ -194,7 +194,7 @@ function onClick() {
 
 .heading,
 .text {
-  color: white;
+  color: var(--white);
   text-align: center;
 }
 
@@ -209,7 +209,7 @@ function onClick() {
 }
 
 .social_media {
-  color: white;
+  color: var(--white);
 
   &__container {
     display: flex;

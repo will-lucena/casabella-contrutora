@@ -29,7 +29,7 @@ function onNavigate(section) {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #01874c;
+  background-color: var(--light-green);
 }
 
 .nav {

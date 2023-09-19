@@ -93,7 +93,7 @@ function onClick() {
 <style lang="scss" scoped>
 @import '@/assets/base.scss';
 .section {
-  background-color: #fcb10c;
+  background-color: var(--yellow);
 }
 
 .content {

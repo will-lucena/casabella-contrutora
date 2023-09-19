@@ -23,12 +23,12 @@ defineProps({
 <style lang="scss" scoped>
 .button {
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--white);
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   width: fit-content;
   cursor: pointer;
-  color: white;
+  color: var(--white);
   font-weight: 600;
 
   transition: all 0.3s ease-in-out;
@@ -38,8 +38,8 @@ defineProps({
   }
 
   &:hover {
-    background-color: #fff;
-    color: black;
+    background-color: var(--white);
+    color: var(--black);
   }
 
   &--icon_button {
