@@ -2,7 +2,7 @@
   <header class="header">
     <Header />
     <NavMobile class="nav--mobile" />
-    <NavDesktop class="nav--desktop" />
+    <NavDesktop class="nav--desktop" @navigateTo="onNavigate" />
   </header>
 </template>
 
@@ -10,6 +10,12 @@
 import Header from '../atoms/Header.vue'
 import NavDesktop from '../molecules/NavDesktop.vue'
 import NavMobile from '../molecules/NavMobile.vue'
+
+const emit = defineEmits('navigateTo')
+
+function onNavigate(section) {
+  emit('navigateTo', section)
+}
 </script>
 
 <style lang="scss" scoped>
@@ -36,7 +42,7 @@ import NavMobile from '../molecules/NavMobile.vue'
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 769px) {
   .nav {
     &--desktop {
       display: flex;

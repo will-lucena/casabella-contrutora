@@ -1,14 +1,16 @@
 <template>
-  <h1>Site em construção</h1>
+  <Index />
 </template>
 
-<script setup></script>
+<script setup>
+import Index from './views/Index.vue'
+</script>
 
 <style lang="scss">
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
+  font-size: calc(15px + 0.390625vw);
 }
 
 p,
@@ -18,7 +20,17 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+a {
   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  width: fit-content;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

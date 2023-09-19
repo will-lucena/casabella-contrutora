@@ -18,7 +18,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        run: yarn build --base=/development/ # The build command of your project
+        run: yarn build --base=./ # The build command of your project
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop

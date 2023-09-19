@@ -12,8 +12,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
 
   margin: 0 auto;
+  padding: 2rem 1rem;
 }
 </style>
