@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/base.scss'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars, faChevronLeft, faChevronRight, faXmark } from '@fortawesome/free-solid-svg-icons'

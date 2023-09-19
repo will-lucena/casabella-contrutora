@@ -1,17 +1,10 @@
 <template>
   <div>
-    <font-awesome-icon
-      v-if="!expanded"
-      icon="fa-solid fa-bars"
-      @click="toggle"
-      class="menu_toggle"
-      size="xl"
-    />
-    <div v-else>
+    <font-awesome-icon icon="fa-solid fa-bars" @click="toggle" class="menu_toggle" size="xl" />
+    <div v-if="expanded">
       <div class="bottom_sheet__background"></div>
       <div class="bottom_sheet">
         <font-awesome-icon
-          v-if="expanded"
           icon="fa-solid fa-xmark"
           @click="toggle"
           class="close_bottom_sheet"
@@ -48,7 +41,7 @@ function toggle() {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
   gap: 1rem;
 
   &__background {
@@ -71,6 +64,6 @@ function toggle() {
 }
 
 .menu_toggle {
-  padding: 0 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 </style>

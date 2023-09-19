@@ -46,6 +46,7 @@ function onSubmit() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/base.scss';
 .section {
   background-color: #01874c;
 }
@@ -79,7 +80,7 @@ function onSubmit() {
   width: 100%;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: $screen-size-md) {
   .content {
     flex-direction: row;
   }

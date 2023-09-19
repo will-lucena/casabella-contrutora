@@ -8,6 +8,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@import '@/assets/base.scss';
 .header__container {
   display: flex;
   flex-direction: row;
@@ -26,7 +27,7 @@
   font-weight: 600;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: $screen-size-sm) {
   .title {
     font-size: 1.5rem;
   }

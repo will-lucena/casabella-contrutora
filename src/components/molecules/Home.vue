@@ -118,6 +118,7 @@ function onClick() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/base.scss';
 .section {
   background-color: #01874c;
   margin-top: 50px;
@@ -227,7 +228,7 @@ function onClick() {
   flex: 1;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: $screen-size-md) {
   .info {
     &__container {
       display: flex;

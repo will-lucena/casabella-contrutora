@@ -8,10 +8,12 @@
         :key="index"
         :src="source"
         :alt="alt"
+        width="100%"
         loading="lazy"
       />
 
       <BaseButton
+        v-if="hasMultipleSlides"
         class="prev"
         @click="plusSlides(-1)"
         icon-button
@@ -20,6 +22,7 @@
         <font-awesome-icon size="lg" icon="fa-solid fa-chevron-left" />
       </BaseButton>
       <BaseButton
+        v-if="hasMultipleSlides"
         class="next"
         @click="plusSlides(1)"
         icon-button
@@ -61,6 +64,10 @@ const computedSlides = computed(() => {
       shouldRender: index === slideIndex.value
     }
   })
+})
+
+const hasMultipleSlides = computed(() => {
+  return computedSlides.value.length > 1
 })
 
 // Next/previous controls

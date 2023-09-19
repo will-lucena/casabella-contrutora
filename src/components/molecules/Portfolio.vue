@@ -91,6 +91,7 @@ function onClick() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/base.scss';
 .section {
   background-color: #fcb10c;
 }
@@ -114,9 +115,9 @@ function onClick() {
 
   &__container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 2rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
   }
 }
@@ -137,17 +138,17 @@ function onClick() {
   width: 100%;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: $screen-size-md) {
   .text {
     text-align: start;
   }
 
   .product__container {
-    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: $screen-size-xl) {
   .text {
     text-align: start;
   }
