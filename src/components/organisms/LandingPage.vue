@@ -7,6 +7,14 @@
     <About />
   </div>
   <Header />
+  <a
+    href="https://api.whatsapp.com/send?phone=5584981592121"
+    target="_blank"
+    aria-label="ícone do whatsapp"
+    class="whatsapp_cta"
+  >
+    <font-awesome-icon size="2xl" icon="fa-brands fa-whatsapp" class="whatsapp_cta__icon" />
+  </a>
 </template>
 
 <script setup>
@@ -22,5 +30,20 @@ import Header from './Header.vue'
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.whatsapp_cta {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+
+  padding: 1rem;
+  margin: 1rem;
+  color: white;
+  background-color: #25d366;
+  border-radius: 100%;
+  text-align: center;
+  box-shadow: 2px 2px 3px #222;
 }
 </style>
