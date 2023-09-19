@@ -29,6 +29,7 @@ defineProps({
   width: fit-content;
   cursor: pointer;
   color: white;
+  font-weight: 600;
 
   transition: all 0.3s ease-in-out;
 
@@ -37,7 +38,8 @@ defineProps({
   }
 
   &:hover {
-    background-color: rgba($color: #000000, $alpha: 0.5);
+    background-color: #fff;
+    color: black;
   }
 
   &--icon_button {

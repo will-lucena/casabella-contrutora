@@ -5,7 +5,7 @@
         <p class="text">CONSTRUTORA CASABELLA</p>
         <p class="text">CNPJ 11.291.349/0001-46</p>
         <p class="text">Rua de Manoel Ovídio, nº 1381, Barro vermelho, Natal-RN</p>
-        <p class="text">3033-1629</p>
+        <p class="text">84 3033-1629</p>
       </div>
       <h3 class="copyright">Desenvolvido por Will Lucena</h3>
     </div>

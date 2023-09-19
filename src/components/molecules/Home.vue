@@ -23,7 +23,7 @@
               concretização dos sonhos, transformando ideias em realidade, sempre com seriedade e
               qualidade na execução de suas obras, para entregar, à cada família, a melhor moradia,
               conforto, lazer e segurança, fornecendo a estrutura completa para uma vida melhor.
-              Conte sempre consoco!
+              Conte sempre conosco!
             </p>
           </div>
           <section class="social_media__container">
@@ -54,7 +54,7 @@
         </section>
       </section>
 
-      <img class="people" :src="fachada1" alt="Time" />
+      <img class="people" src="@/assets/team.jpg" alt="Time de engenharia" />
 
       <section class="product__container">
         <section class="product__info">
@@ -66,9 +66,17 @@
           </p>
           <BaseButton class="product__cta" @click="onClick">Agende uma visita</BaseButton>
         </section>
-
-        <Carousel class="product__images" :slides="images" />
+        <GMapMap
+          :center="{ lat: -5.932024139418291, lng: -35.27390407208708 }"
+          :zoom="18"
+          map-type-id="terrain"
+          style="min-height: 300px"
+          class="map"
+        >
+          <GMapMarker :position="{ lat: -5.932024139418291, lng: -35.27390407208708 }" />
+        </GMapMap>
       </section>
+      <Carousel class="people" :slides="images" />
     </div>
   </SectionShell>
 </template>
@@ -201,6 +209,10 @@ function onClick() {
 
 .people {
   width: 100%;
+}
+.map {
+  width: 100%;
+  flex: 1;
 }
 
 @media only screen and (min-width: 769px) {

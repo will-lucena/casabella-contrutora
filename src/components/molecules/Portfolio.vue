@@ -1,7 +1,7 @@
 <template>
   <SectionShell class="section">
     <div class="content">
-      <h2 class="heading">Outros de nossos empreendimentos</h2>
+      <h2 class="heading">Conheça nossos projetos</h2>
       <div class="product__container">
         <div class="product" v-for="({ copy, imageSource, alt }, index) in products" :key="index">
           <img loading="lazy" class="image" :src="imageSource" :alt="alt" />
@@ -25,7 +25,7 @@ const products = ref([
   {
     alt: 'fachada1',
     imageSource: fachada1,
-    copy: `Sucesso de vendas, o Residencial Olho D'água 3, também é sucesso entre os nossos clientes compradores e moradores. Bem projetado, com acabamento de excelente qualidade e assistência técnica quase inexistente, se tornou referência em empreendimentos do mesmo seguimento.`
+    copy: `Nosso primeiro empreendimento vertical, projetado para levar conforto, segurança e qualidade aos nossos clientes/moradores, o Olho D'água 1 foi fundamental no crescimento da Casabella como construtora, nos trazendo a expertise para o lançamento seguinte, o Olho D'água 3.`
   },
   {
     alt: 'fachada1',
@@ -91,16 +91,10 @@ function onClick() {
 }
 
 .image {
-  width: 240px;
-  height: 135px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 769px) {
-  .image {
-    width: 160px;
-    height: 90px;
-  }
-
   .text {
     text-align: start;
   }
@@ -111,11 +105,6 @@ function onClick() {
 }
 
 @media only screen and (min-width: 1200px) {
-  .image {
-    width: 320px;
-    height: 180px;
-  }
-
   .text {
     text-align: start;
   }
