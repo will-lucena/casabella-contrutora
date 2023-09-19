@@ -76,7 +76,7 @@
           <GMapMarker :position="{ lat: -5.932024139418291, lng: -35.27390407208708 }" />
         </GMapMap>
       </section>
-      <Carousel class="people" :slides="images" />
+      <Carousel class="people" :slides="slides" />
     </div>
   </SectionShell>
 </template>
@@ -86,17 +86,29 @@ import { ref } from 'vue'
 import BaseButton from '../atoms/BaseButton.vue'
 import SectionShell from '../molecules/SectionShell.vue'
 
-import fachada1 from '@/assets/coohabinalVillage/fachada1.webp'
-import fachada3 from '@/assets/coohabinalVillage/fachada3.webp'
-import quarto from '@/assets/coohabinalVillage/quarto.webp'
-import sala from '@/assets/coohabinalVillage/sala.webp'
+import coohabinalVillage1 from '@/assets/coohabinalVillage/image1.webp'
+import coohabinalVillage2 from '@/assets/coohabinalVillage/image2.webp'
+import coohabinalVillage3 from '@/assets/coohabinalVillage/image3.webp'
+import coohabinalVillage4 from '@/assets/coohabinalVillage/image4.webp'
 import Carousel from '../atoms/Carousel.vue'
 
-const images = ref([
-  { alt: 'fachada1', source: fachada1 },
-  { alt: 'fachada3', source: fachada3 },
-  { alt: 'quarto', source: quarto },
-  { alt: 'sala', source: sala }
+const slides = ref([
+  {
+    alt: `fachada coohabinal village`,
+    source: coohabinalVillage1
+  },
+  {
+    alt: `fachada inclinada coohabinal village`,
+    source: coohabinalVillage2
+  },
+  {
+    alt: `sala coohabinal village`,
+    source: coohabinalVillage3
+  },
+  {
+    alt: `quarto coohabinal village`,
+    source: coohabinalVillage4
+  }
 ])
 
 function onClick() {
