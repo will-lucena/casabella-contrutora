@@ -27,6 +27,7 @@ a {
 
 a {
   width: fit-content;
+  text-decoration: none;
 }
 
 html {

@@ -1,6 +1,6 @@
 <template>
   <header class="header__container">
-    <img class="logo" src="@/assets/logo.png" alt="Casabella Construtora logo" />
+    <img class="logo" src="@/assets/logoBranca.png" alt="Casabella Construtora logo" />
     <h1><a class="title" href="#">Casabella Construtora</a></h1>
   </header>
 </template>
@@ -15,10 +15,10 @@
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  padding-left: 1rem;
 }
 .logo {
   width: 50px;
-  height: 50px;
 }
 
 .title {
@@ -27,9 +27,15 @@
   font-weight: 600;
 }
 
-@media only screen and (min-width: $screen-size-sm) {
+@media only screen and (min-width: $screen-size-md) {
   .title {
     font-size: 1.5rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
   }
 }
 </style>
