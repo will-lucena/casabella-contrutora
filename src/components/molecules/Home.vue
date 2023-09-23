@@ -60,10 +60,7 @@
         <section class="product__info">
           <h2 class="heading">Nosso mais novo empreendimento</h2>
           <p class="text">
-            O Residencial Coohabinal Village está localizado em uma das melhores localizações de
-            Parnamirim, com área de lazer completa, planta com 63,79m², bem distribuída com 2/4,
-            sendo uma semi-suíte, proporcionando para você e sua família, toda a segurança,
-            tranquilidade e conforto que vocês merecem!!!
+            {{ copy }}
           </p>
           <BaseButton class="product__cta" @click="onClick">Agende uma visita</BaseButton>
         </section>
@@ -111,6 +108,11 @@ const slides = ref([
     source: coohabinalVillage4
   }
 ])
+
+const copy = `O Residencial Coohabinal Village está localizado em uma das melhores localizações de
+            Parnamirim, com área de lazer completa, planta com 63,79m², bem distribuída com 2/4,
+            sendo uma semi-suíte, proporcionando para você e sua família, toda a segurança,
+            tranquilidade e conforto que vocês merecem!!!`
 
 function onClick() {
   const element = document.getElementById('contact')
