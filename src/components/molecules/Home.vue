@@ -61,8 +61,9 @@
           <h2 class="heading">Nosso mais novo empreendimento</h2>
           <p class="text">
             O Residencial Coohabinal Village está localizado em uma das melhores localizações de
-            Parnamirim, com área de lazer completa, proporcionando para você e sua família,
-            segurança, tranquilidade e conforto em sua casa!
+            Parnamirim, com área de lazer completa, planta com 63,79m², bem distribuída com 2/4,
+            sendo uma semi-suíte, proporcionando para você e sua família, toda a segurança,
+            tranquilidade e conforto que vocês merecem!!!
           </p>
           <BaseButton class="product__cta" @click="onClick">Agende uma visita</BaseButton>
         </section>
