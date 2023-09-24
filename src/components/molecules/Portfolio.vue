@@ -38,7 +38,10 @@ const products = ref([
         source: olhoDagua1
       }
     ],
-    copy: `Nosso primeiro empreendimento vertical, projetado para levar conforto, segurança e qualidade aos nossos clientes/moradores, o Olho D'água 1 foi fundamental no crescimento da Casabella como construtora, nos trazendo a expertise para o lançamento seguinte, o Olho D'água 3.`
+    copy: `Nosso primeiro empreendimento vertical, projetado para levar 
+      conforto, segurança e qualidade aos nossos clientes/moradores, o Olho 
+      D'água 1 foi fundamental no crescimento da Casabella como construtora, nos 
+      trazendo a expertise para o lançamento seguinte, o Olho D'água 3.`
   },
   {
     slides: [
@@ -59,7 +62,10 @@ const products = ref([
         source: olhoDagua34
       }
     ],
-    copy: `Sucesso de vendas, o Residencial Olho D'água 3, também é sucesso entre os nossos clientes compradores e moradores. Bem projetado, com acabamento de excelente qualidade e assistência técnica quase inexistente, se tornou referência em empreendimentos do mesmo seguimento.`
+    copy: `Sucesso de vendas, o Residencial Olho D'água 3, também é sucesso 
+      entre os nossos clientes compradores e moradores. Bem projetado, com 
+      acabamento de excelente qualidade e assistência técnica quase inexistente, 
+      se tornou referência em empreendimentos do mesmo seguimento.`
   },
   {
     slides: [
@@ -80,7 +86,10 @@ const products = ref([
         source: coohabinalVillage4
       }
     ],
-    copy: `O Residencial Coohabinal Village está localizado em uma das melhores localizações de Parnamirim, com área de lazer completa, proporcionando para você e sua família, segurança, tranquilidade e conforto em sua casa!`
+    copy: `O Residencial Coohabinal Village está localizado em uma das melhores 
+      localizações de Parnamirim, com área de lazer completa, planta com 63,79m², 
+      bem distribuída com 2/4, sendo uma semi-suíte, proporcionando para você e 
+      sua família, toda a segurança, tranquilidade e conforto que vocês merecem!!!`
   }
 ])
 
@@ -93,7 +102,7 @@ function onClick() {
 <style lang="scss" scoped>
 @import '@/assets/base.scss';
 .section {
-  background-color: #fcb10c;
+  background-color: var(--yellow);
 }
 
 .content {

@@ -4,6 +4,16 @@ $screen-size-lg: 992px;
 $screen-size-xl: 1200px;
 $screen-size-xxl: 1400px;
 
+:root{
+  --white: #fff;
+  --black: #000;
+  --dot-gray: #bbb;
+  --dot-dark-gray: #717171; 
+  --light-green: #007D42;
+  --dark-green: #00361e;
+  --yellow: #F6BD00;
+}
+
 *,
 *::before,
 *::after {

@@ -17,19 +17,19 @@ defineEmits(['update:modelValue'])
 .text_input {
   background: transparent;
   border: none;
-  border-bottom: 1px solid white;
-  color: white;
+  border-bottom: 1px solid var(--white);
+  color: var(--white);
   padding-bottom: 0.25rem;
 }
 
 .text_input::placeholder {
-  color: white;
+  color: var(--white);
   opacity: 0.8;
 }
 
 .text_input:focus {
   outline: none;
-  border: 1px solid white;
+  border: 1px solid var(--white);
   padding: 0.5rem 0.25rem;
 }
 </style>

@@ -29,6 +29,6 @@
 .menu_item {
   font-size: 1rem;
   font-weight: 400;
-  color: white;
+  color: var(--white);
 }
 </style>

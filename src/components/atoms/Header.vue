@@ -22,7 +22,7 @@
 }
 
 .title {
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 600;
 }

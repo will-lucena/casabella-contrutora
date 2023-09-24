@@ -19,9 +19,9 @@ defineEmits(['update:modelValue'])
 <style lang="scss" scoped>
 .text_input {
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--white);
 
-  color: white;
+  color: var(--white);
   outline: none;
   resize: none;
   overflow: auto;
@@ -29,13 +29,13 @@ defineEmits(['update:modelValue'])
 }
 
 .text_input::placeholder {
-  color: white;
+  color: var(--white);
   opacity: 0.8;
 }
 
 .text_input:focus {
   border: none;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--white);
   padding: 0;
   padding-bottom: 0.25rem;
 }

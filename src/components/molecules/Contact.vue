@@ -48,7 +48,7 @@ function onSubmit() {
 <style lang="scss" scoped>
 @import '@/assets/base.scss';
 .section {
-  background-color: #01874c;
+  background-color: var(--light-green);
 }
 
 .form {
@@ -72,7 +72,7 @@ function onSubmit() {
 
 .heading {
   font-size: 1.75rem;
-  color: white;
+  color: var(--white);
   font-weight: 700;
 }
 

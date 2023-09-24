@@ -7,7 +7,9 @@
         <p class="text">Rua de Manoel Ovídio, nº 1381, Barro vermelho, Natal-RN</p>
         <p class="text">84 3033-1629</p>
       </div>
-      <h3 class="copyright">Desenvolvido por Will Lucena</h3>
+      <a href="https://www.instagram.com/will.lucenads/" target="_blank">
+        <h3 class="copyright">Desenvolvido por Will Lucena</h3>
+      </a>
     </div>
   </SectionShell>
 </template>
@@ -18,7 +20,7 @@ import SectionShell from '../molecules/SectionShell.vue'
 
 <style lang="scss" scoped>
 .section {
-  background-color: #00361e;
+  background-color: var(--dark-green);
   height: 100%;
   padding-bottom: 0;
 }
@@ -32,13 +34,13 @@ import SectionShell from '../molecules/SectionShell.vue'
 
 .text {
   font-size: 1rem;
-  color: white;
+  color: var(--white);
   font-weight: 400;
 }
 
 .copyright {
   font-size: 0.75rem;
-  color: white;
+  color: var(--white);
   font-weight: 100;
   text-align: center;
 
